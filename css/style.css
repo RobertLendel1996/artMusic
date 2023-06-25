@@ -896,6 +896,7 @@ body::after {
 .form-main-block {
   opacity: 0;
   position: absolute;
+  z-index: 4;
   bottom: 5%;
   left: 5%;
   display: -webkit-inline-box;
@@ -1013,6 +1014,10 @@ body::after {
 .no-webp .playlists{
   background: url("../img/background.png") 100% 100%/100% 100% no-repeat; }
 
+.playlists {
+  padding-bottom: 6.875rem;
+}
+
 .playlists__decor {
   position: absolute;
 }
@@ -1102,6 +1107,7 @@ body::after {
 }
 
 .last {
+  padding-bottom: 6.875rem;
   position: relative;
 }
 
@@ -1281,6 +1287,7 @@ body::after {
   background: url("../img/background.png") 100% 100%/100% 100% no-repeat; }
 
 .about {
+  padding-bottom: 6.875rem;
   color: #FFFFFF;
   position: relative;
 }
@@ -1384,6 +1391,10 @@ body::after {
 .no-webp .about__buttons .button{
   background: url("../img/background.png") 100% 100%/100% 100% no-repeat; }
 
+.posts {
+  padding-bottom: 6.875rem;
+}
+
 .posts__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1472,6 +1483,7 @@ body::after {
   background: url("../img/background.png") 100% 100%/100% 100% no-repeat; }
 
 .reviews {
+  padding-bottom: 6.875rem;
   color: #FFFFFF;
   position: relative;
 }
@@ -1729,6 +1741,10 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.menu-subscribe__item:not(:last-child) {
+  margin-bottom: 0.625rem;
 }
 
 .menu-subscribe__link {
@@ -2061,10 +2077,6 @@ body::after {
     padding-top: 7rem;
   }
 
-  .playlists {
-    padding-bottom: 7rem;
-  }
-
   .playlists__slider:not(:last-child) {
     margin-bottom: 7.5rem;
   }
@@ -2079,10 +2091,6 @@ body::after {
 
   .last {
     padding-top: 7rem;
-  }
-
-  .last {
-    padding-bottom: 7rem;
   }
 
   .last__decor {
@@ -2105,10 +2113,6 @@ body::after {
     padding-top: 7rem;
   }
 
-  .about {
-    padding-bottom: 7rem;
-  }
-
   .about__decor {
     font-size: 19.375rem;
   }
@@ -2123,10 +2127,6 @@ body::after {
 
   .posts {
     padding-top: 7rem;
-  }
-
-  .posts {
-    padding-bottom: 7rem;
   }
 
   .posts__items:not(:last-child) {
@@ -2147,10 +2147,6 @@ body::after {
 
   .reviews {
     padding-top: 7rem;
-  }
-
-  .reviews {
-    padding-bottom: 7rem;
   }
 
   .reviews__decor_3 {
@@ -2479,10 +2475,6 @@ body::after {
     padding-top: 4.375rem;
   }
 
-  .playlists {
-    padding-bottom: 3.125rem;
-  }
-
   .playlists__slider:not(:last-child) {
     margin-bottom: 2.5rem;
   }
@@ -2497,10 +2489,6 @@ body::after {
 
   .last {
     padding-top: 4.375rem;
-  }
-
-  .last {
-    padding-bottom: 3.125rem;
   }
 
   .last__decor {
@@ -2523,10 +2511,6 @@ body::after {
     padding-top: 4.375rem;
   }
 
-  .about {
-    padding-bottom: 3.125rem;
-  }
-
   .about__decor {
     font-size: 3.125rem;
   }
@@ -2541,10 +2525,6 @@ body::after {
 
   .posts {
     padding-top: 4.375rem;
-  }
-
-  .posts {
-    padding-bottom: 3.125rem;
   }
 
   .posts__items:not(:last-child) {
@@ -2565,10 +2545,6 @@ body::after {
 
   .reviews {
     padding-top: 4.375rem;
-  }
-
-  .reviews {
-    padding-bottom: 3.125rem;
   }
 
   .reviews__decor_3 {
@@ -2730,6 +2706,10 @@ body::after {
 
   .header__body {
     min-height: 4.0625rem;
+  }
+
+  .main-block {
+    padding-bottom: 6.25rem;
   }
 
   .playlists__decor {
@@ -3388,18 +3368,6 @@ body::after {
     }
 }
 
-@supports (padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem )) {
-    .playlists {
-      padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem );
-    }
-}
-
-@supports not (padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem )) {
-    .playlists {
-      padding-bottom: calc(3.125rem + 3.875 * (100vw - 20rem) / 57.1875);
-    }
-}
-
 @supports (margin-bottom: clamp( 2.5rem , 0.7513661202rem  +  8.7431693989vw , 7.5rem )) {
     .playlists__slider:not(:last-child) {
       margin-bottom: clamp( 2.5rem , 0.7513661202rem  +  8.7431693989vw , 7.5rem );
@@ -3445,18 +3413,6 @@ body::after {
 @supports not (padding-top: clamp( 4.375rem , 3.4569672131rem  +  4.5901639344vw , 7rem )) {
     .last {
       padding-top: calc(4.375rem + 2.625 * (100vw - 20rem) / 57.1875);
-    }
-}
-
-@supports (padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem )) {
-    .last {
-      padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem );
-    }
-}
-
-@supports not (padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem )) {
-    .last {
-      padding-bottom: calc(3.125rem + 3.875 * (100vw - 20rem) / 57.1875);
     }
 }
 
@@ -3520,18 +3476,6 @@ body::after {
     }
 }
 
-@supports (padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem )) {
-    .about {
-      padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem );
-    }
-}
-
-@supports not (padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem )) {
-    .about {
-      padding-bottom: calc(3.125rem + 3.875 * (100vw - 20rem) / 57.1875);
-    }
-}
-
 @supports (font-size: clamp( 3.125rem , -2.5580601093rem  +  28.4153005464vw , 19.375rem )) {
     .about__decor {
       font-size: clamp( 3.125rem , -2.5580601093rem  +  28.4153005464vw , 19.375rem );
@@ -3577,18 +3521,6 @@ body::after {
 @supports not (padding-top: clamp( 4.375rem , 3.4569672131rem  +  4.5901639344vw , 7rem )) {
     .posts {
       padding-top: calc(4.375rem + 2.625 * (100vw - 20rem) / 57.1875);
-    }
-}
-
-@supports (padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem )) {
-    .posts {
-      padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem );
-    }
-}
-
-@supports not (padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem )) {
-    .posts {
-      padding-bottom: calc(3.125rem + 3.875 * (100vw - 20rem) / 57.1875);
     }
 }
 
@@ -3649,18 +3581,6 @@ body::after {
 @supports not (padding-top: clamp( 4.375rem , 3.4569672131rem  +  4.5901639344vw , 7rem )) {
     .reviews {
       padding-top: calc(4.375rem + 2.625 * (100vw - 20rem) / 57.1875);
-    }
-}
-
-@supports (padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem )) {
-    .reviews {
-      padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem );
-    }
-}
-
-@supports not (padding-bottom: clamp( 3.125rem , 1.7698087432rem  +  6.7759562842vw , 7rem )) {
-    .reviews {
-      padding-bottom: calc(3.125rem + 3.875 * (100vw - 20rem) / 57.1875);
     }
 }
 
